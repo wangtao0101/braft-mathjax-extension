@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-recommended"
+  ],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "rule-empty-line-before": "always",
+    "font-family-no-missing-generic-family-keyword": null,
+    "selector-pseudo-class-no-unknown": [true, {
+      ignorePseudoClasses: ["global"]
+    }],
+    "no-descending-specificity": null,
+  }
+}
