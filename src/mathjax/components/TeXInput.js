@@ -107,13 +107,11 @@ class TeXInput extends React.Component {
     const { start, end } = this.state
     const copyThis = this
     setTimeout(() => {
-      copyThis.teXinput.focus()
-      copyThis.teXinput.setSelectionRange(start, end)
+      if (copyThis != null) {
+        copyThis.teXinput.focus()
+        copyThis.teXinput.setSelectionRange(start, end)
+      }
     }, 0)
-  }
-
-  componentWillUnmount() {
-    console.log('asdf')
   }
 
   shouldComponentUpdate(nextProps, nextState) {
