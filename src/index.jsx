@@ -1,2 +1,4 @@
 import createMathjaxExtension from "./extension";
-export default createMathjaxExtension;
+import processTeX from "./mathjax/mathjax/processTeX";
+
+export { createMathjaxExtension, processTeX };

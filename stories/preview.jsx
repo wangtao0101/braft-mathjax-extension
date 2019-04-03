@@ -1,6 +1,6 @@
 import React from "react";
 import "braft-editor/dist/output.css";
-import processTeX from "../src/mathjax/mathjax/processTeX";
+import { processTeX } from '../src';
 
 export default class Preview extends React.Component {
   componentDidMount() {

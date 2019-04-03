@@ -4,7 +4,7 @@ import BraftEditor from "braft-editor";
 
 import "braft-editor/dist/index.css";
 import Preview from "./preview.jsx";
-import createMathjaxExtension from "../src";
+import { createMathjaxExtension } from "../src";
 
 BraftEditor.use(createMathjaxExtension());
 
