@@ -3,11 +3,10 @@ import ReactDOM from "react-dom";
 import BraftEditor from "braft-editor";
 
 import "braft-editor/dist/index.css";
-
-import { mathjaxExtension } from "../src/index.jsx";
 import Preview from "./preview.jsx";
+import createMathjaxExtension from "../src";
 
-BraftEditor.use(mathjaxExtension);
+BraftEditor.use(createMathjaxExtension());
 
 export default class Editor extends React.Component {
   constructor(props) {
@@ -36,7 +35,7 @@ export default class Editor extends React.Component {
 
   getHtml = () => {
     return this.state.editorState.toHTML();
-  }
+  };
 
   setReadOnly = readOnly => {
     this.setState({
@@ -71,10 +70,10 @@ export default class Editor extends React.Component {
               {
                 key: "custom-modal",
                 type: "modal",
-                text: "模态框",
+                text: "预览",
                 modal: {
                   id: "my-moda-1",
-                  title: "你好啊",
+                  title: "预览",
                   children: (
                     <div style={{ width: 600, padding: "10px" }}>
                       <Preview getHtml={this.getHtml} />
