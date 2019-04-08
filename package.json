@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "cross-env NODE_ENV=production babel src -d dist"
+    "build": "cross-env NODE_ENV=production babel src -d dist",
+    "pb": "npm publish --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
