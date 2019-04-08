@@ -2,11 +2,12 @@
   "name": "braft-mathjax-extension",
   "version": "0.0.1",
   "description": "Mathjax extension for  [braft-editor](https://github.com/margox/)",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "cross-env NODE_ENV=production babel src -d dist"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,14 @@
     "braft-editor": "^2.2.9"
   },
   "devDependencies": {
-    "@storybook/react": "^5.0.6",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
     "@storybook/addons": "^5.0.6",
-    "@babel/core": "^7.4.0",
-    "babel-loader": "^8.0.5"
+    "@storybook/react": "^5.0.6",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0"
   }
 }
